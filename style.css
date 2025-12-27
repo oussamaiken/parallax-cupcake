@@ -1,0 +1,369 @@
+
+:root {
+  --gold: #cc9966;
+  --dark-overlay: rgba(0, 0, 0, 0.7);
+  --menu-bg: #544639;
+  --teal: #006666;
+  --white-soft: rgba(255, 255, 255, 0.85);
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.intro,
+.menu,
+.about,
+.contact {
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--dark-overlay);
+  display: flex;
+  justify-content: flex-end;
+  gap: 2em;
+  padding: 1em 3em;
+  z-index: 9999;
+}
+
+.nav-item {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.nav-item:hover,
+.active {
+  text-decoration: underline 3px solid var(--gold);
+}
+
+.firstNavToggle {
+  display: none;
+  position: fixed;
+  top: 0.8em;
+  right: 1em;
+  font-size: 2em;
+  color: var(--gold);
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.navMenu-active {
+  display: flex !important;
+  flex-direction: column;
+  position: fixed;
+  top: 4em;
+  left: 0;
+  width: 100%;
+  background: var(--dark-overlay);
+  text-align: center;
+  z-index: 9999;
+}
+
+body {
+  padding-top: 80px;
+}
+
+
+.intro {
+  background-image: url("img/antique-cafe-bg-01.jpg");
+  position: relative;
+}
+
+.intro-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.heading {
+  background: var(--dark-overlay);
+  padding: 3em;
+  margin-top: 6em;
+  text-align: center;
+}
+
+.heading1 {
+  color: white;
+  font-size: 3em;
+}
+
+.heading2 {
+  color: var(--gold);
+}
+
+.intro-text {
+  background: var(--dark-overlay);
+  color: white;
+  padding: 2em;
+  max-width: 500px;
+  text-align: center;
+}
+
+.explore {
+  background: var(--dark-overlay);
+  color: var(--gold);
+  padding: 1em 2em;
+  text-decoration: none;
+  font-size: 1.4em;
+  border-radius: 0.3em;
+}
+
+.menu {
+  background-image: url("img/antique-cafe-bg-02.jpg");
+  padding-bottom: 4em;
+}
+
+.menu-heading {
+  background: white;
+  color: var(--menu-bg);
+  padding: 0.5em 1em;
+  margin: 3em auto;
+  font-size: 2em;
+  width: fit-content;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.menu1 {
+  background: var(--menu-bg);
+  padding: 2.5em;
+  border-radius: 0.5em;
+  max-width: 420px;
+}
+
+.menu-item {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.menu-item-heading {
+  color: var(--gold);
+}
+
+.menu-item-spec {
+  color: white;
+}
+
+
+.about {
+  background-image: url("img/antique-cafe-bg-03.jpg");
+}
+
+.about-data {
+  background: var(--white-soft);
+  padding: 2.5em;
+  max-width: 500px;
+  margin: 6em auto 3em;
+  text-align: center;
+}
+
+.about-heading {
+  color: var(--teal);
+  font-size: 2em;
+}
+
+.contactBtn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--teal);
+  color: white;
+  padding: 1em 2.5em;
+  font-size: 1.4em;
+
+  text-decoration: none;
+  border-radius: 0.5em;
+  align-self: center; 
+  margin: 2em auto 4em;  
+}
+
+ 
+.contact {
+  background-image: url("img/antique-cafe-bg-04.jpg");
+  padding-bottom: 4em;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  flex-wrap: wrap;
+}
+
+.contact-data {
+  background: var(--white-soft);
+  padding: 2em;
+  max-width: 320px;
+  margin-top: 6em;
+}
+
+.map-btn {
+  background: var(--teal);
+  padding: 1em;
+  text-align: center;
+  border-radius: 0.3em;
+}
+
+.map {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-form {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2em;
+  margin-top: 6em;
+  max-width: 350px;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--gold);
+  color: white;
+  padding: 1em;
+  font-size: 1em;
+  width: 100%;
+}
+
+.send {
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+
+
+.copyright {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 2em;
+  margin: 0;
+}
+
+
+.butterfly-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.butterfly {
+  position: absolute;
+  opacity: 0.85;
+  animation: float 12s ease-in-out infinite;
+}
+
+.b1 { top: 30%; left: 10%; width: 180px; }
+.b2 { top: 55%; left: 60%; width: 150px; animation-delay: 3s; }
+.b3 { top: 20%; left: 80%; width: 130px; animation-delay: 6s; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-40px) rotate(10deg); }
+  100% { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .firstNavToggle {
+    display: block;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+}
+.contact-btn-wrapper {
+  display: flex;
+  justify-content: center; 
+}
+
+
+/* =====================
+   EXTRA PARALLAX LAYERS
+===================== */
+
+.shape-layer,
+.icon-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Shapes */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35); 
+}
+
+.s1 { width: 120px; height: 120px; top: 20%; left: 15%; }
+.s2 { width: 80px; height: 80px; top: 60%; left: 70%; }
+.s3 { width: 60px; height: 60px; top: 40%; left: 45%; }
+
+/* Icons */
+.icon {
+  position: absolute;
+  font-size: 4rem;
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+.i1 { top: 30%; left: 10%; }
+.i2 { top: 70%; left: 80%; }
+
+/* Text layer */
+.parallax-text {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  font-size: 8rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.15);
+  z-index: 2;
+  pointer-events: none;
+
+}
+
+
+
+
+
